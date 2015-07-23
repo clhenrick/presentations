@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Thesis Review</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <link rel="stylesheet" type="text/css" href="big.css">
+    <script type="text/javascript" src="big.js"></script>
+  </head>
+  <body>
+    
+    <div class="center">
+      <h1>Am I Rent Stabilized?</h1>
+      <p>
+             Chris Henrick <br>
+             MFA DT, 2015
+      </p>
+    </div>
+
+    <div>
+      <h3>Concept:</h4>
+      <p>        
+        A webapp to encourage NYC tenants to find out if their landlord is 
+        <em>illegally over charging</em> them in rent.
+      </p>
+    </div>
+
+    <div>
+        <h1>Background</h1>
+    </div>
+
+    <div><img src="img/hcr-list-pdf.png"></div>
+
+    <div><img src="img/hcr-list-pdf_bbl_highlight.png"></div>    
+
+    <div><img src="img/foil-request_.png"></div>
+
+    <div><img src="img/nyc_pluto.png"></div>
+
+    <div>
+      <img src="img/nyc-likely-reg-vs-non-reg-rent-stabl.jpg">
+    </div>
+
+    <div>
+      <h3>Q:</h3>
+      <p>How to make this data more <em>useful?</em></p>
+    </div>
+
+    <div>
+      <h3>A:</h3>
+      <p><em style="position: relative; left:10%;">Civic Data</em><br> <span style="position:relative; left:40%;">&#62;&#62;&#62;</span><br><em style="position: relative; left:70%;">Civic Action</em></p>
+    </div>
+
+    <div><h1>Demo</h1></div>
+
+    <div><h1>DHCR Data Analysis</h1></div>
+
+    <div><em>Parsing</em> DHCR data</div>
+    <div><img src="img/dhcr-data-combined.png"></div>
+
+    <div><em>Geocoding</em> DHCR data</div>
+
+    <div>MapPLUTO</div>
+    <div><img src="img/nyc_pluto.png"></div>
+    <div><img src="img/bbl-join.png"></div>
+
+    <div>Analysis of properties that <em>likely have</em> Rent-Stabilized apartments</div>
+    <div>
+      <h3>SQL:</h3>
+      <pre>
+        <code style="position:relative; line-height: 175%;">
+          SELECT * FROM map_pluto2014v2 
+                WHERE 
+                    yearbuilt < 1974 AND unitsres >= 6 
+                    AND 
+                        (
+                        ownername not ILIKE 'new york city housing authority' 
+                        OR ownername not ILIKE 'nycha'
+                        )
+                    AND bldgclass not ILIKE 'r%'; 
+        </code>
+      </pre>
+    </div>
+
+    <div><h1>Tenants Rights Group Data Analysis</h1></div>
+
+    <div>Scraping DHCR's list of <em>Community Based Housing Org's</em></div>
+
+    <div>Creating polygon boundaries for each group's <em>catchment area</em></div>
+    <div><img src="img/tr-boundaries-creation.png"></div>
+
+    <div><em>CartoDB</em> is used to host &amp; retrieve both datasets</div>
+
+    <div><h1>Storing Website Content as JSON data</h1></div>
+
+    <div>Content is stored in JSON files based on page</div>
+
+    <div><em>Handlebars JS</em> is used to templating for HTML pages</div>
+
+    <div><a href="https://github.com/clhenrick/am-i-rent-stabilized/">Code</a></div>
+
+    <div><h1>Thanks!</h1></div>
+    
+    <div></div>
+  </body>
+</html>
