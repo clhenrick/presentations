@@ -4,4 +4,10 @@ Presentations on projects I've created or helped create. These presentations hav
 ## To View Them
 - Go to `http://clhenrick.io/presentations/<presentation-name>` where `<presentation-name>` is the spelled the same as the directory in this repo.
 
+- Use your &#10615; and &#9654; keys to navigate.
+
+- links have a cyan background color, click on them to visit. (warning, poor UX will also make the slides advance, blame BIG!)
+
 - Open developer tools and check out the javascript console for notes.
+
+
