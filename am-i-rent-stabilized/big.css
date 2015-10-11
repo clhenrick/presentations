@@ -2,7 +2,7 @@ body {
   font-family: "Oxygen", Arial,"Helvetica Neue", Helvetica, sans-serif;
   background: #fff;
   background-size: 100%;
-  color: #9B9B9B;
+  color: hsl(0,0%,50%);
   margin:0;
   padding:0;
   font-weight: 100;
@@ -14,13 +14,14 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 1px;
   line-height: 90%;
   color: #FFC462;
+  /*text-shadow: 0px 0px 8px hsla(0,0%,20%,0.6);*/
   margin:0;
 }
 
 p {
-  letter-spacing: 1px;
+  letter-spacing: -0.01em;
   line-height: 150%;
-  color: #9B9B9B;
+  color: hsl(0,0%,40%);
 }
 
 p span {
@@ -31,13 +32,13 @@ p span {
 
 em {
   font-weight: 600;
-  line-height: 150%;
+  color: rgb(216, 154, 135);
+  line-height: 110%;
 }
 
-em, a {
+/*em, a {
   font-style:normal;
-  color:#277159;
-}
+}*/
 
 a {
   background: #4a4a4a;
@@ -47,6 +48,7 @@ a {
 
 img {
   width:100%;
+  border: 1px solid #9b9b9b;
 }
 
 div {
@@ -65,5 +67,38 @@ div.center {
 }
 
 div.imageText {
-  text-shadow:0px 0px 5px rgba(0,0,0,0.2);
+  text-shadow: 0px 0px 15px hsla(0,0%,20%,0.8);
+  color: rgb(216, 154, 135);
+  font-weight: bolder;
+  opacity: 0.9;
+}
+
+.right {
+  text-align: right;
+  float: right;
+}
+
+hr {
+  border-width: 3px;
+  border-style: solid;
+  border-color: hsl(0,0%,75%);
+}
+
+pre {
+  background-color: hsl(0,0%,20%);
+}
+
+code {
+  background-color: inherit;
+  line-height: 160%;
+  color: hsl(0,0%,90%);
+}
+
+/* normally not good, but ok in context of full screen directional navigation */
+:focus {
+    outline: 0;
+}
+
+notes {
+  display: none;
 }
