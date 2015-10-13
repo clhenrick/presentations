@@ -1,6 +1,12 @@
 NACIS 2015 Mapping For Social Justice presentation notes
 ========================================================
 
+To Do:
+
+- brief outline
+- points
+- recap
+
 - Hi, my name is Chris Henrick, I have a background in cartography and GIS, currently work as a web-developer, recently completed MFA Design Technology program at Parsons the New School For Design
 
 - Concept is to use NYC open data, technology and personal narratives to prevent the displacement of residents.
